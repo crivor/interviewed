@@ -16,4 +16,8 @@ class StevenfosterPalindromeTest < Minitest::Test
   def test_palindrome_phrase
   	assert "Madam, I'm Adam".palindrome?
   end
+
+  def test_empty_string
+  	refute "".palindrome?
+  end
 end
