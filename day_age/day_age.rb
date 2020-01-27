@@ -9,7 +9,7 @@ birthday = STDIN.gets.chomp
 # Validate we got a correctly formated date from the user
 birthday = Date.parse(birthday)
 
-today = DateTime.now
+today = Time.now.to_date
 
 case 
   when birthday < today
