@@ -11,8 +11,13 @@ birthday = Date.parse(birthday)
 
 today = DateTime.now
 
-# If a user provided a birthday in the future
-# output you will be born in x days!
-day_age = ( today - birthday ).to_i
-
-puts "You are #{day_age} days old today!"
+case 
+  when birthday < today
+    day_age = ( today - birthday ).to_i
+    puts "You are #{day_age} days old today!"
+  when birthday > today
+    day_age = ( birthday - today ).to_i
+    puts "You will be born in #{day_age} days!"
+  when birthday == today
+    puts "Happy Birthday!"
+  end
